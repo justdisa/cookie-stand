@@ -7,14 +7,32 @@ section {
   border: 5px solid darksalmon;
   border-radius: 5px;
   color: salmon;
+  font-family: arial;
   margin: 10%;
   padding: 10%;
 }
 
-h1{
-  text-align: center;
+h1 {
+  text-align: left;
 }
 
 h2 {
   text-align: center;
+}
+
+p {
+  text-align: justify;
+}
+
+li {
+  border-color: darksalmon;
+  border-style: solid;
+  border-width: 0px 0px 2px 0px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.notes {
+  font-style: italic;
+  text-align: right;
 }
