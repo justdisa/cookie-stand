@@ -13,4 +13,4 @@ for(var index = 0; index < stores.length; index++){
   listElement.textContent = stores[index] + ' ~ Customers Served: ' + customers[index] + '; Total Sales: $' + sales[index] + '; Sales per Customer: $' + (sales[index] / customers[index]).toFixed(2);
   storeList.appendChild(listElement);
 }
-//hope I haven't violated too many assignment rules//
+// I haven't violated too many assignment rules. Revisiting in class.//
