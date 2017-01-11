@@ -7,32 +7,48 @@ section {
   border: 5px solid darksalmon;
   border-radius: 5px;
   color: salmon;
-  font-family: arial;
+  font-family: tahoma;
   margin: 10%;
   padding: 10%;
 }
 
 h1 {
   text-align: left;
-}
-
-h2 {
-  text-align: center;
+  margin-bottom: 2px;
 }
 
 p {
   text-align: justify;
 }
 
-li {
+lh {
+  font-weight: bold;
+}
+
+ol, ul {
+  list-style-position: inside;
   border-color: darksalmon;
   border-style: solid;
-  border-width: 0px 0px 2px 0px;
-  padding: 10px;
-  margin: 10px;
+  border-width: 0px 0px 1px 0px;
+}
+
+li {
+  color: lightblue;
+  font-style: italic;
+  font-size: .8em;
+  padding: 2px;
+  margin: 2px;
+}
+
+.cookie-total {
+  color: salmon;
+  font-style: normal;
+  font-weight: bold;
 }
 
 .notes {
+  color: lightblue;
   font-style: italic;
   text-align: right;
+  margin-top: 1px;
 }

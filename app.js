@@ -1,4 +1,5 @@
 'use strict';
+
 var times = ['6 AM', '7 AM', '8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', '8 PM', 'Total: '];
 
 //big clunky objects
@@ -130,7 +131,7 @@ firstAndPike.cookiesSum();
 var myList = document.getElementById('firstandpike');
 myList.setAttribute('class', 'cookie-list');
 
-for (var i = 0; 1 < firstAndPike.results.length; i++){
+for (var i = 0; i < firstAndPike.results.length; i++){
   var listEl = document.createElement('li');
   listEl.textContent = times[i] + ' ' + firstAndPike.results[i];
   if (i === firstAndPike.results.length - 1){
@@ -146,7 +147,7 @@ seatacAirport.cookiesSum();
 var myList = document.getElementById('seatacairport');
 myList.setAttribute('class', 'cookie-list');
 
-for (var i = 0; 1 < seatacAirport.results.length; i++){
+for (var i = 0; i < seatacAirport.results.length; i++){
   var listEl = document.createElement('li');
   listEl.textContent = times[i] + ' ' + seatacAirport.results[i];
   if (i === seatacAirport.results.length - 1){
@@ -162,7 +163,7 @@ seattleCenter.cookiesSum();
 var myList = document.getElementById('seattlecenter');
 myList.setAttribute('class', 'cookie-list');
 
-for (var i = 0; 1 < seattleCenter.results.length; i++){
+for (var i = 0; i < seattleCenter.results.length; i++){
   var listEl = document.createElement('li');
   listEl.textContent = times[i] + ' ' + seattleCenter.results[i];
   if (i === seattleCenter.results.length - 1){
@@ -178,7 +179,7 @@ capitolHill.cookiesSum();
 var myList = document.getElementById('capitolhill');
 myList.setAttribute('class', 'cookie-list');
 
-for (var i = 0; 1 < capitolHill.results.length; i++){
+for (var i = 0; i < capitolHill.results.length; i++){
   var listEl = document.createElement('li');
   listEl.textContent = times[i] + ' ' + capitolHill.results[i];
   if (i === capitolHill.results.length - 1){
@@ -194,7 +195,7 @@ alki.cookiesSum();
 var myList = document.getElementById('alki');
 myList.setAttribute('class', 'cookie-list');
 
-for (var i = 0; 1 < alki.results.length; i++){
+for (var i = 0; i < alki.results.length; i++){
   var listEl = document.createElement('li');
   listEl.textContent = times[i] + ' ' + alki.results[i];
   if (i === alki.results.length - 1){
@@ -203,4 +204,4 @@ for (var i = 0; 1 < alki.results.length; i++){
   myList.appendChild(listEl);
 }
 
-//Better.//
+//Better.
