@@ -122,68 +122,84 @@ var alki = {
   }
 };
 
-//code by store//
-//firstAndPike
+//calling objects, functions, and DOM code by store//
+//firstAndPike store
 firstAndPike.cookiesPerHour();
 firstAndPike.cookiesSum();
 
-var mylist = document.getElementById('firstandpike');
+var myList = document.getElementById('firstandpike');
+myList.setAttribute('class', 'cookie-list');
 
 for (var i = 0; 1 < firstAndPike.results.length; i++){
   var listEl = document.createElement('li');
   listEl.textContent = times[i] + ' ' + firstAndPike.results[i];
+  if (i === firstAndPike.results.length - 1){
+    listEl.setAttribute('class', 'cookie-total');
+  }
   myList.appendChild(listEl);
 }
 
-//seatacAirport
-
+//seatacAirport store
 seatacAirport.cookiesPerHour();
 seatacAirport.cookiesSum();
 
-var mylist = document.getElementById('seatacairport');
+var myList = document.getElementById('seatacairport');
+myList.setAttribute('class', 'cookie-list');
 
 for (var i = 0; 1 < seatacAirport.results.length; i++){
   var listEl = document.createElement('li');
   listEl.textContent = times[i] + ' ' + seatacAirport.results[i];
+  if (i === seatacAirport.results.length - 1){
+    listEl.setAttribute('class', 'cookie-total');
+  }
   myList.appendChild(listEl);
 }
 
-//seattleCenter
-
+//seattleCenter store
 seattleCenter.cookiesPerHour();
 seattleCenter.cookiesSum();
 
-var mylist = document.getElementById('seattlecenter');
+var myList = document.getElementById('seattlecenter');
+mylist.setAttribute('class', 'cookie-list');
 
 for (var i = 0; 1 < seattleCenter.results.length; i++){
   var listEl = document.createElement('li');
   listEl.textContent = times[i] + ' ' + seattleCenter.results[i];
+  if (i === seattleCenter.results.length - 1){
+    listEl.setAttribute('class', 'cookie-total');
+  }
   myList.appendChild(listEl);
 }
 
-//capitolHill
-
+//capitolHill store
 capitolHill.cookiesPerHour();
 capitolHill.cookiesSum();
 
-var mylist = document.getElementById('capitolhill');
+var myList = document.getElementById('capitolhill');
+mylist.setAttribute('class', 'cookie-list');
 
 for (var i = 0; 1 < capitolHill.results.length; i++){
   var listEl = document.createElement('li');
   listEl.textContent = times[i] + ' ' + capitolHill.results[i];
+  if (i === capitolHill.results.length - 1){
+    listEl.setAttribute('class', 'cookie-total');
+  }
   myList.appendChild(listEl);
 }
 
-//alki
+//alki store
+alki.cookiesPerHour();
+alki.cookiesSum();
 
-firstAndPike.cookiesPerHour();
-firstAndPike.cookiesSum();
+var myList = document.getElementById('alki');
+mylist.setAttribute('class', 'cookie-list');
 
-var mylist = document.getElementById('firstandpike');
-
-for (var i = 0; 1 < firstAndPike.results.length; i++){
+for (var i = 0; 1 < alki.results.length; i++){
   var listEl = document.createElement('li');
-  listEl.textContent = times[i] + ' ' + firstAndPike.results[i];
+  listEl.textContent = times[i] + ' ' + alki.results[i];
+  if (i === alki.results.length - 1){
+    listEl.setAttribute('class', 'cookie-total');
+  }
   myList.appendChild(listEl);
 }
 
