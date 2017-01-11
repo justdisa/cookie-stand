@@ -122,4 +122,69 @@ var alki = {
   }
 };
 
-// I hope I haven't violated too many assignment rules. Revisiting in class.//
+//code by store//
+//firstAndPike
+firstAndPike.cookiesPerHour();
+firstAndPike.cookiesSum();
+
+var mylist = document.getElementById('firstandpike');
+
+for (var i = 0; 1 < firstAndPike.results.length; i++){
+  var listEl = document.createElement('li');
+  listEl.textContent = times[i] + ' ' + firstAndPike.results[i];
+  myList.appendChild(listEl);
+}
+
+//seatacAirport
+
+seatacAirport.cookiesPerHour();
+seatacAirport.cookiesSum();
+
+var mylist = document.getElementById('seatacairport');
+
+for (var i = 0; 1 < seatacAirport.results.length; i++){
+  var listEl = document.createElement('li');
+  listEl.textContent = times[i] + ' ' + seatacAirport.results[i];
+  myList.appendChild(listEl);
+}
+
+//seattleCenter
+
+seattleCenter.cookiesPerHour();
+seattleCenter.cookiesSum();
+
+var mylist = document.getElementById('seattlecenter');
+
+for (var i = 0; 1 < seattleCenter.results.length; i++){
+  var listEl = document.createElement('li');
+  listEl.textContent = times[i] + ' ' + seattleCenter.results[i];
+  myList.appendChild(listEl);
+}
+
+//capitolHill
+
+capitolHill.cookiesPerHour();
+capitolHill.cookiesSum();
+
+var mylist = document.getElementById('capitolhill');
+
+for (var i = 0; 1 < capitolHill.results.length; i++){
+  var listEl = document.createElement('li');
+  listEl.textContent = times[i] + ' ' + capitolHill.results[i];
+  myList.appendChild(listEl);
+}
+
+//alki
+
+firstAndPike.cookiesPerHour();
+firstAndPike.cookiesSum();
+
+var mylist = document.getElementById('firstandpike');
+
+for (var i = 0; 1 < firstAndPike.results.length; i++){
+  var listEl = document.createElement('li');
+  listEl.textContent = times[i] + ' ' + firstAndPike.results[i];
+  myList.appendChild(listEl);
+}
+
+//Better.//
