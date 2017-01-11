@@ -160,7 +160,7 @@ seattleCenter.cookiesPerHour();
 seattleCenter.cookiesSum();
 
 var myList = document.getElementById('seattlecenter');
-mylist.setAttribute('class', 'cookie-list');
+myList.setAttribute('class', 'cookie-list');
 
 for (var i = 0; 1 < seattleCenter.results.length; i++){
   var listEl = document.createElement('li');
@@ -176,7 +176,7 @@ capitolHill.cookiesPerHour();
 capitolHill.cookiesSum();
 
 var myList = document.getElementById('capitolhill');
-mylist.setAttribute('class', 'cookie-list');
+myList.setAttribute('class', 'cookie-list');
 
 for (var i = 0; 1 < capitolHill.results.length; i++){
   var listEl = document.createElement('li');
@@ -192,7 +192,7 @@ alki.cookiesPerHour();
 alki.cookiesSum();
 
 var myList = document.getElementById('alki');
-mylist.setAttribute('class', 'cookie-list');
+myList.setAttribute('class', 'cookie-list');
 
 for (var i = 0; 1 < alki.results.length; i++){
   var listEl = document.createElement('li');
