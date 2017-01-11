@@ -1,26 +1,124 @@
 'use strict';
+var times = ['6 AM', '7 AM', '8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', '8 PM', 'Total: '];
 
-var stores = ['Beacon Hill', 'Columbia City', 'SoDo', 'Ballard', 'Alki', 'Shoreline'];
-var sales = [328.45, 99.04, 12.11, 176.19, 180.76, 85.22];
-var customers = [412, 7, 2, 70, 112, 36];
+//big clunky objects
+var firstAndPike = {
+  minCustomers: 23,
+  maxCustomers: 65,
+  avgCookies: 6.3,
+  results: [],
+  cookiesPerHour: function() {
+    for(var i = 0; i < times.length - 1; i++){
+      var randomNumber = Math.floor(Math.random() * (this.maxCustomers - this.minCustomers) + this.minCustomers);
+      console.log(randomNumber);
+      var numCookies = Math.floor (randomNumber * this.avgCookies);
+      console.log(numCookies);
+      this.results.push(numCookies);
+    }
+  },
+  cookiesSum: function () {
+    var sum = 0;
+    for (var j = 0; j < this.results.length; j++) {
+      sum = sum + this.results[j];
+    }
+    this.results.push(sum);
+    console.log(sum);
+  }
+};
 
-var storeList = document.getElementById('my-list');
+var seatacAirport = {
+  minCustomers: 3,
+  maxCustomers: 24,
+  avgCookies: 1.2,
+  results: [],
+  cookiesPerHour: function() {
+    for(var i = 0; i < times.length - 1; i++){
+      var randomNumber = Math.floor(Math.random() * (this.maxCustomers - this.minCustomers) + this.minCustomers);
+      console.log(randomNumber);
+      var numCookies = Math.floor (randomNumber * this.avgCookies);
+      console.log(numCookies);
+      this.results.push(numCookies);
+    }
+  },
+  cookiesSum: function () {
+    var sum = 0;
+    for (var j = 0; j < this.results.length; j++) {
+      sum = sum + this.results[j];
+    }
+    this.results.push(sum);
+    console.log(sum);
+  }
+};
 
-for(var index = 0; index < stores.length; index++){
-  console.log(stores[index]);
-  var listElement = document.createElement('li');
-  listElement.setAttribute('class', 'storeList-item');
-  listElement.textContent = stores[index] + ' ~ Customers Served: ' + customers[index] + '; Total Sales: $' + sales[index] + '; Sales per Customer: $' + (sales[index] / customers[index]).toFixed(2);
-  storeList.appendChild(listElement);
-}
+var seattleCenter = {
+  minCustomers: 11,
+  maxCustomers: 38,
+  avgCookies: 3.7,
+  results: [],
+  cookiesPerHour: function() {
+    for(var i = 0; i < times.length - 1; i++){
+      var randomNumber = Math.floor(Math.random() * (this.maxCustomers - this.minCustomers) + this.minCustomers);
+      console.log(randomNumber);
+      var numCookies = Math.floor (randomNumber * this.avgCookies);
+      console.log(numCookies);
+      this.results.push(numCookies);
+    }
+  },
+  cookiesSum: function () {
+    var sum = 0;
+    for (var j = 0; j < this.results.length; j++) {
+      sum = sum + this.results[j];
+    }
+    this.results.push(sum);
+    console.log(sum);
+  }
+};
 
-var store = {
-  storeName: 'Beacon Hill',
-  sales: sales[0],
-  customers: customers[0],
-  perCustomer: 'Data coming soon!',
-  login: function(){
-    console.log(userName + ' logged in!');
+var capitolHill = {
+  minCustomers: 20,
+  maxCustomers: 38,
+  avgCookies: 2.3,
+  results: [],
+  cookiesPerHour: function() {
+    for(var i = 0; i < times.length - 1; i++){
+      var randomNumber = Math.floor(Math.random() * (this.maxCustomers - this.minCustomers) + this.minCustomers);
+      console.log(randomNumber);
+      var numCookies = Math.floor (randomNumber * this.avgCookies);
+      console.log(numCookies);
+      this.results.push(numCookies);
+    }
+  },
+  cookiesSum: function () {
+    var sum = 0;
+    for (var j = 0; j < this.results.length; j++) {
+      sum = sum + this.results[j];
+    }
+    this.results.push(sum);
+    console.log(sum);
+  }
+};
+
+var alki = {
+  minCustomers: 2,
+  maxCustomers: 16,
+  avgCookies: 4.6,
+  results: [],
+  cookiesPerHour: function() {
+    for(var i = 0; i < times.length - 1; i++){
+      var randomNumber = Math.floor(Math.random() * (this.maxCustomers - this.minCustomers) + this.minCustomers);
+      console.log(randomNumber);
+      var numCookies = Math.floor (randomNumber * this.avgCookies);
+      console.log(numCookies);
+      this.results.push(numCookies);
+    }
+  },
+  cookiesSum: function () {
+    var sum = 0;
+    for (var j = 0; j < this.results.length; j++) {
+      sum = sum + this.results[j];
+    }
+    this.results.push(sum);
+    console.log(sum);
   }
 };
 
