@@ -44,6 +44,7 @@ var seattleCenter = new Store ('Seattle Center', 11, 38, 3.7, result, cookiesPer
 var capitolHill = new Store ('Capitol Hill', 20, 38, 2.3, result, cookiesPerHour);
 var alki = new Store ('Alki', 2, 16, 4.6, result, cookiesPerHour);
 
+//code below is not mine. found it on the internet and copied it to try to walk through it step by step. must rewrite//
 function tableCreate() {
 //body reference
   var body = document.getElementsByTagName('body')[0];
