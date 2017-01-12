@@ -40,6 +40,24 @@ li {
   margin: 2px;
 }
 
+#salmon-circle {
+  background-color: white;
+  border: 2px solid darksalmon;
+  border-radius: 100%;
+  width: 40%;
+  height: auto;
+  position: relative;
+  float: right;
+}
+
+#img-one {
+  position:relative;
+  float: right;
+  width: 80%;
+  height: auto;
+  margin: 20px;
+}
+
 .cookie-total {
   color: salmon;
   font-style: normal;
