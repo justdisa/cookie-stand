@@ -1,40 +1,56 @@
 body {
   background-color: #ece1cb;
+  height: 100%
 }
 .header {
   margin: 0 auto;
   overflow: hidden;
   padding: 0 15px;
-  width: 1920px;
-  height: 100px;
+  width: auto;
+  height: 25%;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: darkslategray;
+  background-color: saddlebrown;
   font-family: tahoma;
 }
 
 .container {
-  width: 800px;
-  height: inherit;
-  position: fixed;
+  width: 80%;
+  height: 60%;
   margin: auto;
+  padding: 2%;
 }
 
 h1 {
+  font-family: stardust;
+  src: url(http://www.dafont.com/stardust.font);
+  font-size: 8vw;
   text-align: left;
-  margin-bottom: 2px;
-  color: salmon;
+  margin: auto;
+  color: #F4A460;
   float: left;
 }
 
 #img-one {
-  position:relative;
-  float: right;
-  width: 25%;
-  height: auto;
-  margin: 20px;
+  width: 30%;
+  margin: 10% 10% 10% 60%;
+}
+
+.columns {
+      margin: 40px;
+      -webkit-column-count: 3; /* Chrome, Safari, Opera */
+      -moz-column-count: 3; /* Firefox */
+      column-count: 3;
+
+      -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+      -moz-column-gap: 40px; /* Firefox */
+      column-gap: 40px;
+}
+.content {
+    margin-top: 12%;
+    margin-bottom: 30%;
 }
 
 h3 {
@@ -55,7 +71,7 @@ ol, ul {
 li {
   color: #ece1cb;
   font-style: italic;
-  font-size: .8em;
+  font-size: 1.5vmax;
   padding: 2px;
   margin: 2px;
 }
@@ -70,9 +86,10 @@ li {
   color: #ece1cb;
   font-style: italic;
   text-align: right;
-  margin-top: 1px;
-  float: right;
+  margin: auto;
+  padding: 2px;
 }
+
 .navbar {
   list-style-type: none;
   margin: 0;
@@ -94,12 +111,12 @@ a:link {
   margin: 0 auto;
   overflow: hidden;
   padding: 0 15px;
-  width: 1920px;
-  height: 40px;
+  width: auto;
+  height: 10%;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: darkslategray;
+  background-color: saddlebrown;
   font-family: tahoma;
 }
