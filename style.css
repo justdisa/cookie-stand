@@ -2,27 +2,12 @@ body {
   background-color: #ece1cb;
   height: 100%
 }
-.header {
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 0 15px;
-  width: auto;
-  height: 25%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: saddlebrown;
-  font-family: tahoma;
+
+p {
+  text-align: justify;
 }
 
-.container {
-  width: 80%;
-  height: 60%;
-  margin: auto;
-  padding: 2%;
-}
-
+/*Heading Tags*/
 h1 {
   font-family: stardust;
   src: url(http://www.dafont.com/stardust.font);
@@ -30,37 +15,16 @@ h1 {
   text-align: left;
   margin: auto;
   color: #F4A460;
-  float: left;
 }
-
-#img-one {
-  width: 30%;
-  margin: 10% 10% 10% 60%;
-}
-
-.columns {
-      margin: 40px;
-      -webkit-column-count: 3; /* Chrome, Safari, Opera */
-      -moz-column-count: 3; /* Firefox */
-      column-count: 3;
-
-      -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
-      -moz-column-gap: 40px; /* Firefox */
-      column-gap: 40px;
-}
-.content {
-    margin-top: 12%;
-    margin-bottom: 30%;
+h2 {
+  text-align: center;
 }
 
 h3 {
   font-weight: bold;
 }
 
-p {
-  text-align: justify;
-}
-
+/*List Tags*/
 ol, ul {
   list-style-position: inside;
   border-color: darksalmon;
@@ -76,6 +40,76 @@ li {
   margin: 2px;
 }
 
+/*Header and Footer*/
+.header {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 15px;
+  width: auto;
+  height: 12vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: saddlebrown;
+  font-family: tahoma;
+}
+
+.footer {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 15px;
+  width: auto;
+  height: 3vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: saddlebrown;
+  font-family: tahoma;
+}
+
+/*Container Tags*/
+.columns {
+  margin: 40px;
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count: 3; /* Firefox */
+  column-count: 3;
+
+  -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+  -moz-column-gap: 40px; /* Firefox */
+  column-gap: 40px;
+}
+
+.container1 {
+  width: 60%;
+  height: 30%;
+  margin: auto;
+  padding: 2%;
+  float: left;
+}
+
+.container2 {
+  width: 30%;
+  height: 30%;
+  margin: auto;
+  padding: 2%;
+  float: right;
+}
+
+.content {
+  margin-top: 12%;
+  margin-bottom: 30%;
+}
+
+.tagline {
+  width: 95%;
+  height: 5%;
+  padding: 2%;
+  float: left;
+}
+
+/*Text Tags*/
 .cookie-total {
   color: salmon;
   font-style: normal;
@@ -85,6 +119,7 @@ li {
 .notes {
   color: #ece1cb;
   font-style: italic;
+  font-size: 1.5vw;
   text-align: right;
   margin: auto;
   padding: 2px;
@@ -94,8 +129,8 @@ li {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  color: lightblue;
   border-width: 0px;
+  font-size: 1.5vw;
 }
 
 .horizlink {
@@ -107,16 +142,9 @@ a:link {
   color: #ece1cb;
   text-decoration: none;
 }
-.footer {
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 0 15px;
-  width: auto;
-  height: 10%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: saddlebrown;
-  font-family: tahoma;
+
+/*Image Tags*/
+#salmon {
+  width: 80%;
+  float: right;
 }
