@@ -1,6 +1,8 @@
 body {
-  background-color: #ece1cb;
-  height: 100%
+  background-color: saddlebrown;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 p {
@@ -53,6 +55,7 @@ li {
   right: 0;
   background-color: saddlebrown;
   font-family: tahoma;
+  border-bottom: .1vw solid darkslategray;
 }
 
 .footer {
@@ -67,6 +70,7 @@ li {
   right: 0;
   background-color: saddlebrown;
   font-family: tahoma;
+  border-top: .1vw solid darkslategray;
 }
 
 /*Container Tags*/
@@ -98,8 +102,16 @@ li {
 }
 
 .content {
-  margin-top: 12%;
-  margin-bottom: 30%;
+  color: darkslategray;
+  background-color: #ece1cb;
+  width: auto;
+  margin: 0;
+  padding-top: 15%;
+  padding-right: 2%;
+  padding-bottom: 30%;
+  padding-left: 2%;
+
+
 }
 
 .tagline {
