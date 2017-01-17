@@ -3,6 +3,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: arvo;
+  src: url(https://fonts.google.com/specimen/Arvo);
 }
 
 p {
@@ -42,6 +44,10 @@ li {
   margin: 2px;
 }
 
+table {
+  width: 100%;
+}
+
 /*Header and Footer*/
 .header {
   margin: 0 auto;
@@ -75,6 +81,7 @@ li {
 
 /*Container Tags*/
 .columns {
+  font-family: inherit;
   margin: 40px;
   -webkit-column-count: 3; /* Chrome, Safari, Opera */
   -moz-column-count: 3; /* Firefox */

@@ -21,21 +21,27 @@
         <div class="content">
           <h2>Sales Data</h2>
             <p>One stop shop for all P.S.C. franchise owners. We've moved your frequently used sales data to a new quick-view format so you can keep your focus where it belongs: on the customer.*</p>
-            <ul id="firstandpike">
-              <h3>First and Pike</h3>
-            </ul>
-            <ul id="seatacairport">
-              <h3>Seatac Airport</h3>
-            </ul>
-            <ul id="seattlecenter">
-              <h3>Seattle Center</h3>
-            </ul>
-            <ul id="capitolhill">
-              <h3>Capitol Hill</h3>
-            </ul>
-            <ul id="alki">
-              <h3>Alki</h3>
-            </ul>
+            <table>
+              <tr>
+                <th>Store Name</th>
+                <th>Daily Totals</th>
+                <th>6 AM</th>
+                <th>7 AM</th>
+                <th>8 AM</th>
+                <th>9 AM</th>
+                <th>10 AM</th>
+                <th>11 AM</th>
+                <th>12 PM</th>
+                <th>1 PM</th>
+                <th>2 PM</th>
+                <th>3 PM</th>
+                <th>4 PM</th>
+                <th>5 PM</th>
+                <th>6 PM</th>
+                <th>7 PM</th>
+                <th>8 PM</th>
+              </tr>
+            </table>
               <p class="notes">*blah blah blah</p>
 
               <!-- Add store form. -->
@@ -43,7 +49,7 @@
               <fieldset>
                 <legend>Add New Store</legend>
                   <label>Store Name:<br />
-                  <input type="text" name="name"/></label><br />
+                  <input type="text" storeName="name"/></label><br />
                   <label>Time Store Opens:<br />
                   <input type="text" name="timeOpen"/></label><br />
                   <label>Time Store Closes:<br />

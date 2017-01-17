@@ -1,83 +1,103 @@
 'use strict';
 
-//declare and initialize variables//
-var storesList = [];
+//declare variables//
 var times = ['6 AM', '7 AM', '8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', '8 PM', 'Total: '];
-var salesGrandTotal = 0;
-var salesTableNode;
-var salesTodayTotal = [];
-for (var i = 0; i < times.length - 1; i++) {
-  salesTodayTotal[i] = 0;
-}
+var storesList = [];
 
-function Store(name, timeOpen, timeClosed, minCustomers, maxCustomers, avgCookies, result, cookiesPerHour, cookiesSoldTotal) {
-  this.name = name;
-  this.timeOpen = timeOpen;
-  this.timeClosed = timeClosed;
-  this.minCustomers = minCustomers;
-  this.maxCustomers = maxCustomers;
+//constructor function//
+function Store(storeName, minCustHr, maxCustHr, avgCookies) {
+  this.storeName = storeName;
+  this.minCustHr = minCustHr;
+  this.maxCustHr = maxCustHr;
   this.avgCookies = avgCookies;
-  this.result = result;
-  this.cookiesPerHour = cookiesPerHour();
-  this.cookiesSoldTotal = cookiesSoldTotal();
-};
+  this.cookiesHr = [];
+  this.cookiesDay = 0;
+  storesList.push(this);
+  //random number creator//
+  this.custCalc = function () {
+    return Math.floor(Math.random() * (this.maxCustHr - this.MinCustHr + 1)) + this.minCustHr;
+  };
 
-Store.prototype.checkSales = function () {
-  var hoursOpen = this.timeClosed - this.timeOpen;
-  console.log('Open for ' + hoursOpen + ' hours today.');
-  for (var i = 0; i < hoursOpen; i++) {
-    console.log('Hours elapsed: ' + i);
-    var result = Math.ceil(this.randomCustomers() * this.averageCookiesPerSale);
-    console.log('At ' + (i + this.timeOpen) + '.00' + result + ' cookies were sold.');
-    this.cookiesSoldToday += result;
-    this.cookiesSoldHourly.push[result];
-    console.log('Hourly breakdown: ' + this.cookiesSoldHourly);
-    console.log('Cookies sold in all stores this hour: ' + this.cookiesSoldHourly);
-    salesTodayTotal[i] += result; // you are adding result in a lot of places. Where do you need it? what is salesTodayTotal[i]?//
-    console.log('Total cookies sold so far today: ' + salesGrandTotal); // what type is salesGrandTotal? What are you trying to print here? //
-  }
-};
-
-var firstAndPike = new Store ('First and Pike', 23, 65, 6.3, result, cookiesPerHour);
-var seatacAirport = new Store ('Seatac Airport', 3, 24, 1.2, result, cookiesPerHour);
-var seattleCenter = new Store ('Seattle Center', 11, 38, 3.7, result, cookiesPerHour);
-var capitolHill = new Store ('Capitol Hill', 20, 38, 2.3, result, cookiesPerHour);
-var alki = new Store ('Alki', 2, 16, 4.6, result, cookiesPerHour);
-
-//code below is not mine. found it on the internet and copied it to try to walk through it step by step. must rewrite//
-function tableCreate() {
-//body reference
-  var body = document.getElementsByTagName('body')[0];
-// create elements <table> and a <tbody>
-  var tbl     = document.createElement('table');
-  var tblBody = document.createElement('tbody');
-
-        // cells creation
-  for (var i = 0; i < result.length; i++) { // how many times do you want to repeat this? // //like that?// you want a row for each result? //
-            // table row creation
-    var row = document.createElement('tr');
-
-    for (var j = 0; j < storesList.length; j++) { // how many times do you want ot repeat this?
-        // create element <td> and text node
-        //Make text node the contents of <td> element
-        // put <td> at end of the table row
-      var cell = document.createElement('td');
-      var cellText = document.createTextNode('cell is row ' + j + ', column ' + i); //what do you want your text to be? //
-
-      cell.appendChild(cellText);
-      row.appendChild(cell);
+  this.calcCookiesHr = function () {
+    for (var i = 0; i < times.length; i++) {
+      this.cookiesHr.push(Math.floor(this.avgCookies * this.custCalc()));
+      this.cookiesDay += this.cookiesHr[i];
     }
-            //row added to end of table body
-    tblBody.appendChild(row);
-  }
-        // append the <tbody> inside the <table>
-  tbl.appendChild(tblBody);
-        // put <table> in the <body>
-  body.appendChild(tbl);
-        // tbl border attribute to
-  tbl.setAttribute('border', '2');
-}
+  };
+  this.displayData = function () {
+    this.calcCookiesHr();
 
-//dmDiana--code comes in pretty colors.//
-//dmI need to have a number randomize in one place//
-//coding is all pretty. Don't know what is happening here//
+    var row = document.createElement('tr');
+    var location = document.createElement('th');
+    location.textContent = this.storeName;
+    row.appendChild(location);
+
+    for(var i = 0; i < times.length; i++){
+      var cookieNum = document.createElement('td');
+      cookieNum.textContent = this.cookiesHr[i];
+      row.appendChild(cookieNum);
+      tbl.appendChild(row);
+    }
+    var cookieTotal = document.createElement('tr');
+    cookieTotal.setAttribute('class','total');//change quotes back//
+    cookieTotal.textContent = this.cookiesDay;
+    row.appendChild(cookieTotal);
+    tbl.appendChild(row);
+  };
+};
+
+var firstAndPike = new Store ('First and Pike', 23, 65, 6.3);
+var seatacAirport = new Store ('Seatac Airport', 3, 24, 1.2);
+var seattleCenter = new Store ('Seattle Center', 11, 38, 3.7);
+var capitolHill = new Store ('Capitol Hill', 20, 38, 2.3);
+var alkiBeach = new Store ('Alki Beach', 2, 16, 4.6);
+
+var emptyCell = document.createElement('td');
+emptyCell.setAttribute('class','empty');//change quotes back//
+headerRow.appendChild(emptyCell);
+
+for (var i = 0; i < times.length; i++) {
+  var td = document.createElement('td');
+  td.setAttribute('td','cell'); //change quotes back//
+  td.setAttribute('td','times'); //change quotes back//
+  td.makeHTML = times[i];
+  headerRow.appendChild(td);
+};
+var cookiesDay = document.createElement('th');
+cookiesDay.textContent = 'Total';//change quotes back//
+headerRow.appendChild(cookiesDay);
+tbl.appendChild(headerRow);
+
+function displayAllStores(){
+  for (var i = 0; i < storesList.length; i++) {
+    storesList[i].displayData();
+  }
+}
+displayAllStores();
+document.body.appendChild(tbl);
+
+var newForm = document.getElementById('addstore');//change quotes back//
+var handlerEvent = function(event) {
+  event.preventDefault();
+
+  if(!event.target.storesList.value || !event.target.min.value || !event.target.max.value || !event.target.avg.value) {
+    return alert('Please complete all fields');
+  }
+
+  var location = event.target.location.value;
+  var min = event.target.min.value;
+  var max = event.target.max.value;
+  var avg = event.target.avg.value;
+
+  var addstore = new Store(storeName, min, max, avg);
+
+  event.target.storeList.value = null;
+  event.target.min.value = null;
+  event.target.max.value = null;
+  event.target.avg.value = null;
+
+  storeList.push(addstore);
+  addstore.displayData();
+};
+
+newForm.addEventListener('submit', handlerEvent);
